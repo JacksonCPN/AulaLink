@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="cadastrar.css">
+   <link rel="stylesheet" href="cadastrar.js">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/Assets/AulaLink.png" alt="">
+        <ul class="menu">
+            <li><a href="/home/home.html">Inicio</a></li>
+            <li><a href="/cadastrar/cadastrar.html">Cadastrar</a></li>
+            <li><a href="/entrar/entrar.html">Login</a></li>
+        </ul>
+    </header>
+<br>
+
+<div class="container">
+    <h2>Cadastro de Usuário</h2>
+    <form id="registration-form" action="#">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirmação de Senha:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <label for="age">Idade:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="education">Nível de Estudo:</label>
+        <select id="education" name="education" required>
+            <option value="">Selecione o nível de estudo</option>
+            <option value="fundamental">Fundamental</option>
+            <option value="médio">Médio</option>
+            <option value="superior">Superior</option>
+            <option value="pós-graduação">Pós-graduação</option>
+        </select>
+
+        <label for="isTeacher">Você é professor?</label>
+        <input type="checkbox" id="isTeacher" name="isTeacher">
+
+        <div id="teacherFields" class="hidden">
+            <label for="formation">Formação:</label>
+            <input type="text" id="formation" name="formation">
+
+            <label for="formationDate">Data de Formação:</label>
+            <input type="date" id="formationDate" name="formationDate">
+
+            <label for="experience">Experiência Profissional:</label>
+            <textarea id="experience" name="experience"></textarea>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+
+
+
+
+
+
+
+</body>
+<br>
+<footer>
+    © 2023 AulaLink - Todos os direitos reservados.
+</footer>
+</html>

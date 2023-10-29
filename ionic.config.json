@@ -1,7 +1,0 @@
-{
-  "name": "aulalink",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
