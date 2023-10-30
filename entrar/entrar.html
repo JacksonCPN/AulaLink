@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
     <link rel="stylesheet" href="entrar.css">
-    <link rel="stylesheet" href="entrar.js">
+   <script type="module" src="/entrar/entrar.js"></script>
+
 </head>
 <body>
     <header>
@@ -17,26 +18,16 @@
         </ul>
     </header>
     <br>
-    <div class="login-container">
-        <h2>Faça login</h2>
-        <form id="login-form">
-            <label for="username">Nome de usuário:</label>
-            <br>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <br>
-            <label for="password">Senha:</label>
-            <br>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <br>
-            <button type="submit">Entrar</button>
-        </form>
-        <p id="error-message" class="error-message"></p>
-        <p><a href="/recuperar_senha.html">Esqueceu a senha?</a></p>
-        <p><a href="/cadastrar/cadastrar.html"><button type="button">Cadastrar</button></a></p>
+    <form id="login-form">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required>
         <br>
-    </div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+      </form>
+      <p id="error-message"></p>
 </body>
 <br>
 <footer>
