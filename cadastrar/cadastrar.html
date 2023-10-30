@@ -63,6 +63,19 @@
         <button type="submit">Cadastrar</button>
     </form>
 </div>
+
+<script>
+    const isTeacherCheckbox = document.getElementById("isTeacher");
+    const teacherFields = document.getElementById("teacherFields");
+
+    isTeacherCheckbox.addEventListener("change", function () {
+        if (isTeacherCheckbox.checked) {
+            teacherFields.classList.remove("hidden");
+        } else {
+            teacherFields.classList.add("hidden");
+        }
+    });
+</script>
 </body>
 <br>
 <footer>

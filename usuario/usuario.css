@@ -103,15 +103,36 @@ display: none;
 }
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
 /* FIM CSS BASE DO MENU */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+.header-logo {
+    max-width: 200px;
 }
 
-.container {
-    max-width: 900px;
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user-profile {
+    max-width: 800px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -119,50 +140,82 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.user-profile h1 {
     text-align: center;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
+.user-info {
+    margin: 20px 0;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
+.info-label {
+    font-weight: bold;
+}
+
+.info-value {
+    margin-left: 10px;
+}
+
+.user-info {
+    margin: 20px 0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#user-info {
+    flex: 1;
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+#calendar {
+    flex: 1;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#search-bar {
+    margin-bottom: 10px;
 }
 
-#teacherFields {
-    display: none;
-}
-
-.hidden {
-    display: none;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:226px;
+  }
+  
+  #btnBusca{
+    float:left;
+    cursor:pointer;
+  }
+  
+  #divBusca img{
+    float:left;
+  }
+  
+  #divBusca{
+    border:solid 10px rgba(47, 79, 79, 0.8);
+    border-radius:10px;
+    height:37px;
+    width:400px;
+    
+  }
+  .testess{
+    width: 10%;
+  }
