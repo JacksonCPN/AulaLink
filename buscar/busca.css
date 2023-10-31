@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4c4d50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu li {
+    display: inline;
+    margin-left: 20px;
+}                                                                
+
+header .menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    max-width: 500px;
+    max-height: 75px;
+    top: -50px;
+    /* scale: 20%; */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #d97a64; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #7b5c56; 
+}
+
+.menu-icon {
+display: none;
+cursor: pointer;
+}
+
+.menu-icon .bar {
+width: 25px;
+height: 3px;
+background-color: #333;
+margin: 3px 0;
+}
+
+.menu {
+list-style: none;
+}
+
+.menu li {
+display: inline;
+margin-right: 20px;
+}
+
+.menu-mobile #menu {
+display: none;
+}
+
+.menu-mobile.active #menu {
+display: block;
+}
+
+@media (max-width: 768px) {
+.menu-icon {
+display: block;
+}
+
+.menu {
+display: none;
+}
+}
+/* FIM CSS BASE DO MENU */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+}

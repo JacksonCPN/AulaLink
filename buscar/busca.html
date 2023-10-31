@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="busca.css">
+   <script type="module" src="/buscar/busca.html"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/Assets/AulaLink.png" alt="">
+        <ul class="menu">
+            <li><a href="/usuario/usuario.html">Retornar</a></li>
+            <li><a href="/cadastrar/cadastrar.html">Cadastrar</a></li>
+            <li><a href="/entrar/entrar.html">Login</a></li>
+        </ul>
+    </header>
+
+    <h1>Busca de Professores por Tag</h1>
+    <input type="text" id="tagInput" placeholder="Digite uma tag">
+    <button onclick="searchProfessors()">Buscar</button>
+    <div id="results"></div>
+
+    <script src="busca.js"></script>
+
+    <br>
+    <h1>Buscar professor:</h1>
+    <div class="box-busca">
+    <div class="search-box">
+        
+        <form method="post" action="/buscar/busca.html">
+            <input type="text" class="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
+            <button class="search-box-button"><i class="search-box-icone icon icon-search"></i></button>
+        </form>
+    </div><!-- Search -->
+</div><!--Box Busca-->
+</div>
+
+</body>
+<br>
+<footer>
+    © 2023 AulaLink - Todos os direitos reservados.
+</footer>
+</html>
