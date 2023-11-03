@@ -1,4 +1,4 @@
-        body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -34,36 +34,92 @@ header .menu a {
     color: #fff;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .logo {
-    max-width: 500px;
+    max-width: 200px;
     max-height: 75px;
     top: -50px;
+    margin-left: 5rem;
     /* scale: 20%; */
 }
 
-.menu {
+/* Estilo básico do banner */
+.banner {
+    width: 100%;
+    /* A largura do banner será 100% da largura do contêiner pai */
+    max-width: 100%;
+    /* O banner não excederá o tamanho original da imagem */
+    overflow: hidden;
+}
+
+/* Estilo da imagem dentro do banner */
+.banner img {
+    width: 100%;
+    /* A imagem preencherá todo o espaço disponível no banner */
+    height: auto;
+    /* A altura será ajustada automaticamente de acordo com a largura */
+    display: block;
+    /* Remove o espaço extra abaixo da imagem */
+}
+
+.divisao {
+    background-color: #4c4d50;
+}
+
+/* Estilos para o layout de duas colunas */
+.two-column-container {
+    display: flex;
+    /* Cria um layout flexível */
+}
+
+.column {
+    flex: 1;
+    /* Divide o espaço igualmente entre as colunas */
+    padding: 20px;
+    /* Espaçamento interno para melhor leitura */
+}
+
+/* Estilos adicionais para formatação */
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* .menu {
     list-style: none;
     padding: 0;
-}
+} */
 
 .menu li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 10px; /* Espaçamento entre os botões */
 }
 
 .menu li a {
     display: inline-block;
-    padding: 10px 20px; 
-    background-color: #d97a64; 
-    color: #fff; 
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #d97a64; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Cantos arredondados */
 }
 
 .menu li a:hover {
-    background-color: #7b5c56; 
+    background-color: #7b5c56; /* Cor de fundo ao passar o mouse */
 }
 
+/* Estilo para o ícone do menu de hambúrguer */
 .menu-icon {
 display: none;
 cursor: pointer;
@@ -76,6 +132,7 @@ background-color: #333;
 margin: 3px 0;
 }
 
+/* Estilo para o menu no modo desktop */
 .menu {
 list-style: none;
 }
@@ -85,6 +142,7 @@ display: inline;
 margin-right: 20px;
 }
 
+/* Estilo para o menu no modo mobile (inicialmente oculto) */
 .menu-mobile #menu {
 display: none;
 }
@@ -93,22 +151,19 @@ display: none;
 display: block;
 }
 
+/* Media query para mostrar o ícone do menu no modo mobile */
 @media (max-width: 768px) {
 .menu-icon {
 display: block;
 }
 
+/* Ocultar o menu no modo desktop */
 .menu {
 display: none;
 }
 }
+/* fim original */
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
 /* FIM CSS BASE DO MENU */
 
         .error {

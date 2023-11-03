@@ -1,3 +1,5 @@
+/* teste */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -118,6 +120,8 @@ p {
 .menu li a:hover {
     background-color: #7b5c56; /* Cor de fundo ao passar o mouse */
 }
+
+/* teste */
 
 /* Estilo para o ícone do menu de hambúrguer */
 .menu-icon {
