@@ -2,116 +2,146 @@
 <html lang="pt-BR">
 
 <head>
+
+
+    <link rel="stylesheet" href="sobre.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
+ 
+    <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'> -->
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
-<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
-<script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-<link rel="stylesheet" href="sobre.css">
 
-</head>
-<body>
-    <header>
-        <img class="logo" src="/Assets/AulaLink.png" alt="">
+    
+    <title>Home</title>
 
-        <ul class="menu">
-            <li><a href="/home/home.html">Inicio</a></li>
-            <li><a href="/cadastrar/cadastrar.html">Cadastrar</a></li>
-            <li><a href="/entrar/entrar.html">Login</a></li>
-        </ul>
-    </header>
-    <section id="testimonial-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="section-heading text-center">
-                        <BR></BR>
-                        <h2>Quem somos?</h2>
-                        <br>
-                        <br>
-                    </div>
-                </div>
+    <header class="main_header container">
+        <div class="content">
+
+            <div class="main_header_logo">
+                <img src="/Assets/AulaLink.png" alt="logo.png" title="Loop Nerd" />
             </div>
-            <div class="testi-wrap">
-                <div class="client-single active position-1" data-position="position-1">
-                    <div class="client-img">
-                        <img src="/Assets/LOGO.jpg" alt="">
-                    </div>
-                    <div class="client-comment">
-                        <h3>uma plataforma de automação no setor educacional. 
-                            Esta plataforma interliga alunos e professores de forma online e eficiente, proporcionando aos estudantes a oportunidade de encontrar professores adequados às suas necessidades, disponíveis nos horários mais conveniente. <br> Através dessa abordagem online, eliminamos barreiras geográficas e de agenda, permitindo que estudantes e professores se conectem independentemente da localização física e suas rotinas, ampliando assim o acesso à educação de qualidade.
-                             </h3>
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                    <div class="client-info">
-                        <h3>AulaLink</h3>
-                        <p><a ></a></p>
-                    </div>
-                </div>
-                <div class="client-single inactive position-2" data-position="position-2">
-                    <div class="client-img">
-                        <img src="/Assets/D2.jpg" alt="">
-                    </div>
-                    <div class="client-comment">
-                        <h3>Software Engineer | Java | Angular | Spring Framework</h3>
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                    <div class="client-info">
-                        <h3>Denys Wildson</h3>
-                        <p><a ></a></p>
-                    </div>
-                </div>
-                <div class="client-single inactive position-4" data-position="position-4">
-                    <div class="client-img">
-                        <img src="/Assets/L.jpg" alt="">
-                    </div>
-                    <div class="client-comment">
-                        <h3>Software Engineer | Desenvolvedor | Java | Spring Boot | API's Rest</h3>
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                    <div class="client-info">
-                        <h3>Luiz Oliveira</h3>
-                        <p><a ></a></p>
-                    </div>
-                </div>
-                <div class="client-single inactive position-5" data-position="position-5">
-                    <div class="client-img">
-                        <img src="/Assets/J.jpg" alt="">
-                    </div>
-                    <div class="client-comment">
-                        <h3>Web Developer | HTML | CSS | JS | MySQL | Dart | Flutter | Angular  </h3>
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                    <div class="client-info">
-                        <h3>Jackson Nascimento</h3>
-                        <p><a ></a></p>
-                    </div>
-                </div>
-                <div class="client-single inactive position-7" data-position="position-7">
-                    <div class="client-img">
-                        <img src="/Assets/V.jpg" width="40px" alt="">
-                    </div>
-                    <div class="client-comment">
-                        <h3>Desenvolvedor .NET | Software developer | C# | .NET | AWS | Analista de sistemas</h3>
-                        <span><i class="fa fa-quote-left"></i></span>
-                    </div>
-                    <div class="client-info">
-                        <h3>Victor Farias</h3>
-                        <p><a ></a></p>
-                    </div>
-                </div>
-            </div>
+
         </div>
-    </section>
 
+        <nav class="bg menu-nav-slide">
+
+            <a href="/home/home.html"><span data-hover="Iniciar">Inicio</span></a>
+            <a href="/cadastrar/cadastrar.html"><span data-hover="Cadastrar">Cadastrar</span></a>
+            <a href="/entrar/entrar.html"><span data-hover="Login">Login</span></a>
+            <a href="/sobre/sobre.html"><span data-hover="Sobre">Sobre</span></a>
+
+        </nav>
+
+    </header>
+
+<DIV class="sobre">
+
+
+        <section id="testimonial-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="section-heading text-center">
+                            <BR></BR>
+                            <h2>Quem somos?</h2>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-wrap">
+                    <div class="client-single active position-1" data-position="position-1">
+                        <div class="client-img">
+                            <img src="/Assets/LOGO.jpg" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>uma plataforma de automação no setor educacional.
+                                Esta plataforma interliga alunos e professores de forma online e eficiente, proporcionando
+                                aos estudantes a oportunidade de encontrar professores adequados às suas necessidades,
+                                disponíveis nos horários mais conveniente. <br> Através dessa abordagem online, eliminamos
+                                barreiras geográficas e de agenda, permitindo que estudantes e professores se conectem
+                                independentemente da localização física e suas rotinas, ampliando assim o acesso à educação
+                                de qualidade.
+                            </h3>
+                            <span><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="client-info">
+                            <h3>AulaLink</h3>
+                            <p><a></a></p>
+                        </div>
+                    </div>
+                    <div class="client-single inactive position-2" data-position="position-2">
+                        <div class="client-img">
+                            <img src="/Assets/D2.jpg" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Software Engineer | Java | Angular | Spring Framework</h3>
+                            <span><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="client-info">
+                            <h3>Denys Wildson</h3>
+                            <p><a></a></p>
+                        </div>
+                    </div>
+                    <div class="client-single inactive position-4" data-position="position-4">
+                        <div class="client-img">
+                            <img src="/Assets/L.jpg" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Software Engineer | Desenvolvedor | Java | Spring Boot | API's Rest</h3>
+                            <span><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="client-info">
+                            <h3>Luiz Oliveira</h3>
+                            <p><a></a></p>
+                        </div>
+                    </div>
+                    <div class="client-single inactive position-5" data-position="position-5">
+                        <div class="client-img">
+                            <img src="/Assets/J.jpg" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Web Developer | HTML | CSS | JS | MySQL | Dart | Flutter | Angular </h3>
+                            <span><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="client-info">
+                            <h3>Jackson Nascimento</h3>
+                            <p><a></a></p>
+                        </div>
+                    </div>
+                    <div class="client-single inactive position-7" data-position="position-7">
+                        <div class="client-img">
+                            <img src="/Assets/V.jpg" width="40px" alt="">
+                        </div>
+                        <div class="client-comment">
+                            <h3>Desenvolvedor .NET | Software developer | C# | .NET | AWS | Analista de sistemas</h3>
+                            <span><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="client-info">
+                            <h3>Victor Farias</h3>
+                            <p><a></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+
+
+    </div>
+</DIV>
     <footer>
         © 2023 AulaLink - Todos os direitos reservados.
     </footer>
     <script type="text/javascript" src="sobre.js"></script>
-</body>
+    </body>
+
 </html>
