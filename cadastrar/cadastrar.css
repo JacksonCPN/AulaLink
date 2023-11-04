@@ -35,6 +35,9 @@ header .menu a {
 }
 
 footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -95,11 +98,6 @@ p {
     font-size: 14px;
     line-height: 1.4;
 }
-
-/* .menu {
-    list-style: none;
-    padding: 0;
-} */
 
 .menu li {
     display: inline;
