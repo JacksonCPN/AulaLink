@@ -1,52 +1,254 @@
+/* INICIO BASE NOVA NÃO ALTERAR */
+.content {
+    float: left;
+    width: 92%;
+    margin: 0 4%;
+    padding: 20px 0;
+}
+
+/*HEADER*/
+.main_header {
+    background: #ffffff;
+    border-bottom: 1px #f4f4f4 solid;
+    z-index: 1;
+    padding: 0em 0em;
+}
+
+.main_header .content {
+    float: left;
+    padding: 0px 0;
+}
+
+.fixed {
+    display: block;
+    position: fixed;
+    z-index: 9;
+}
+
+.main_header_logo {
+    text-align: center;
+    margin: auto;
+    float: none;
+    width: 390px;
+    padding: 20px 0;
+}
+
+.main_header_logo img {
+    height: 69px;
+}
+
+/*Seu Código*/
+.section-seu-codigo {
+    padding: 10px 0px;
+    background-color: #f4f4f4;
+}
+
+.section-seu-codigo .content {
+    float: left;
+    padding: 1em 0;
+}
+
+.section_title {
+    width: 100%;
+    float: left;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px #eceaea solid;
+    padding-bottom: 1em;
+}
+
+.box-artigo {
+    width: 100%;
+    float: left;
+    background: #fff;
+    text-align: center;
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+/* Menu nav */
+
+nav.bg {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background: rgb(246, 246, 240);
+    background: linear-gradient(90deg, rgba(76, 77, 80) 0%, rgba(123, 92, 86) 0%, rgb(170, 107, 93), rgb(217, 122, 100) 100%);
+}
+
+nav a {
+
+    position: relative;
+    display: inline-block;
+    margin: 16px 20px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+
+}
+
+nav a:hover,
+nav a:focus {
+
+    outline: none;
+    color: #000;
+
+}
+
+/* Menu */
+.menu-nav-slide a {
+    overflow: hidden;
+    padding: 0 8px;
+    height: 1.3em;
+}
+
+.menu-nav-slide a span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.menu-nav-slide a span::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    font-weight: 700;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-nav-slide a:hover span,
+.menu-nav-slide a:focus span {
+
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+/*Menu Nav*/
+
+/*FOOTER*/
+.main_footer {
+    background-color: #353535;
+    color: #fff;
+    font-size: 0.875em;
+}
+
+.main_footer .content {
+    padding: 3em 0em;
+}
+
+.main_footer_copy {
+    background-color: #262626;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 1.5em 0em;
+}
+
+.main_footer_copy p {
+    font-family: 'open_sanslight';
+    font-size: 1em;
+    color: #e1e0e0;
+    height: 20px;
+}
+
+.main_footer_copy .m-b-footer {
+    margin-bottom: 0.5em;
+}
+
+.main_footer_copy .by {
+    font-size: 0.96em;
+}
+
+.main_footer_copy .by i {
+    font-size: 0.96em;
+    margin-right: 3px;
+    color: #e82626;
+}
+
+/*Começa o Responsivo*/
+
+/*480PX BREAKPOINT*/
+/*480 dividido por 16 = 30em*/
+@media (min-width:30em) {
+
+    .boxBannerTopo {
+        padding: 1em 0;
+    }
+
+}
+
+/*600PX BREAKPOINT*/
+/*600 dividido por 16 = 37,5em*/
+@media (min-width:37em) {}
+
+/*768PX BREAKPOINT*/
+/*768 dividido por 16 = 48em*/
+@media (min-width:48em) {}
+
+/*960PX BREAKPOINT*/
+/*960 dividido por 16 = 60em*/
+@media (min-width:60em) {
+
+    .section-seu-codigo {
+        padding: 20px 0px;
+    }
+
+    .section-seu-codigo .content {
+        width: 80%;
+        padding: 1em 0;
+        margin: 0 10%;
+    }
+
+}
+
+/*1280PX BREAKPOINT*/
+/*1280 dividido por 16 = 80em*/
+@media (min-width:80em) {}
+
+/*1366PX BREAKPOINT*/
+/*1366 dividido por 16 = 85,375em*/
+@media (min-width:85em) {
+
+    .content {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+}
+
+/*1600PX BREAKPOINT*/
+/*1600 dividido por 16 = 100em*/
+@media (min-width:100em) {}
+
+/*Fecha o Responsivo*/
+
+
+/* new menu */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #4c4d50;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-header .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header .menu li {
-    display: inline;
-    margin-left: 20px;
-}
-
-header .menu a {
-    text-decoration: none;
-    color: #fff;
-}
-
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-}
-
-.logo {
-    max-width: 200px;
-    max-height: 75px;
-    top: -50px;
-    margin-left: 5rem;
-    /* scale: 20%; */
 }
 
 /* Estilo básico do banner */
@@ -66,10 +268,6 @@ footer {
     /* A altura será ajustada automaticamente de acordo com a largura */
     display: block;
     /* Remove o espaço extra abaixo da imagem */
-}
-
-.divisao {
-    background-color: #4c4d50;
 }
 
 /* Estilos para o layout de duas colunas */
@@ -96,73 +294,7 @@ p {
     line-height: 1.4;
 }
 
-/* .menu {
-    list-style: none;
-    padding: 0;
-} */
-
-.menu li {
-    display: inline;
-    margin-right: 10px; /* Espaçamento entre os botões */
-}
-
-.menu li a {
-    display: inline-block;
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    background-color: #d97a64; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    text-decoration: none;
-    border-radius: 5px; /* Cantos arredondados */
-}
-
-.menu li a:hover {
-    background-color: #7b5c56; /* Cor de fundo ao passar o mouse */
-}
-
-/* Estilo para o ícone do menu de hambúrguer */
-.menu-icon {
-display: none;
-cursor: pointer;
-}
-
-.menu-icon .bar {
-width: 25px;
-height: 3px;
-background-color: #333;
-margin: 3px 0;
-}
-
-/* Estilo para o menu no modo desktop */
-.menu {
-list-style: none;
-}
-
-.menu li {
-display: inline;
-margin-right: 20px;
-}
-
-/* Estilo para o menu no modo mobile (inicialmente oculto) */
-.menu-mobile #menu {
-display: none;
-}
-
-.menu-mobile.active #menu {
-display: block;
-}
-
-/* Media query para mostrar o ícone do menu no modo mobile */
-@media (max-width: 768px) {
-.menu-icon {
-display: block;
-}
-
-/* Ocultar o menu no modo desktop */
-.menu {
-display: none;
-}
-}
-/* FIM CSS BASE DO MENU */
+/* FIM BASE NOVA NÃO ALTERAR */
 
 .header-logo {
     max-width: 200px;
