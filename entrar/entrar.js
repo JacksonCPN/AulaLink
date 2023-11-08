@@ -1,9 +1,9 @@
-import { AuthService } from "../AuthService.js";
+import { AuthService } from "../conexao/services/AuthService";
 
 const loginForm = document.getElementById("login-form");
 const errorMessage = document.getElementById("error-message");
 
-loginForm.addEventListener("submit", function (e) {
+loginForm.addEventListener("submit", function (e) {s
   e.preventDefault();
   // Obter valores de entrada do usuário
   const username = document.getElementById("username").value;

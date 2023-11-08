@@ -21,21 +21,96 @@
         </nav>
     </header>
 
- <script src="/main.js"></script>
+
+
+
+
+
+
+<!-- teste -->
+<script src="/index.js"></script>
+<div class="container">
+    <div class="container-login">
+        <div class="wrap-login">
+            <form class="login-form">
+					<span class="login-form-title">
+						Faça o login
+					</span>
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form" type="text" name="email" id="username" autocomplete="off">
+                    <span class="focus-input-form" data-placeholder="E-mail"></span>
+                </div>
+
+                <div class="wrap-input margin-bottom-35">
+                    <input class="input-form" type="password" name="password" id="password">
+                    <span class="focus-input-form" data-placeholder="Senha"></span>
+                </div>
+
+                <div class="container-login-form-btn">
+                    <!-- <a href="Consulta.html">  -->
+                        <button type="button" class="login-form-btn" onclick="login()">Login </button>
+                    <!-- </a> -->
+                </div>
+                <!-- <li> <a href="Consulta.html" > Login</a> </li> //tirar dps -->
+                <li>
+                    <span class="text1"> Não tem conta? </span> <a href="../cadastrar/cadastrar.html" class="text2" > Criar </a>
+                </li>
+                </ul>
+            </form>
+        </div>
+
+<!-- teste -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <script src="/main.js"></script> -->
+ <!-- <script type="module,component" src="/index.js"></script>
     <div class="testee">
         <form id="login-form">
             <label for="username">Nome de Usuário:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
+            <button type="submit" onclick="login()">Login</button>
+           
         </form>
         <p id="error-message"></p>
-    </div>
+    </div> -->
 
     <footer>
         © 2023 AulaLink - Todos os direitos reservados.
     </footer>
+
+    <script>
+
+        
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script> 
+    <script src="/index.js"></script>
 
     <!-- <script type="component" src="./entrar.js"></script> -->
 </body>
