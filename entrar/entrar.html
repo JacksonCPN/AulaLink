@@ -1,78 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <script type="module" src="/entrar/entrar.js"></script>
-
-    <link rel="stylesheet" href="entrar.css">
+    <link rel="stylesheet" href="./entrar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
-    <header class="main_header container">
-        <div class="content">
-
-            <div class="main_header_logo">
-                <img src="/Assets/AulaLink.png" alt="logo.png" title="Loop Nerd" />
-            </div>
-
-        </div>
-
-        <nav class="bg menu-nav-slide">
-
-            <a href="/home/home.html"><span data-hover="Iniciar">Inicio</span></a>
-            <a href="/cadastrar/cadastrar.html"><span data-hover="Cadastrar">Cadastrar</span></a>
-            <a href="/entrar/entrar.html"><span data-hover="Login">Login</span></a>
-            <a href="/sobre/sobre.html"><span data-hover="Sobre">Sobre</span></a>
-
-        </nav>
-
-    </header>
-
-<!-- <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="entrar.css">
-   <script type="module" src="/entrar/entrar.js"></script>
-   <style>
-
-    
-   </style>
 </head>
 <body>
-    <header>
-        <img class="logo" src="/Assets/AulaLink.png" alt="">
-        <ul class="menu">
-            <li><a href="/home/home.html">Inicio</a></li>
-            <li><a href="/cadastrar/cadastrar.html">Cadastrar</a></li>
-            <li><a href="/entrar/entrar.html">Login</a></li>
-        </ul>
-    </header> -->
-    <br>
+    <header class="main_header container">
+        <div class="content">
+            <div class="main_header_logo">
+                <img src="../Assets/AulaLink.png" alt="logo.png" title="Loop Nerd" />
+            </div>
+        </div>
+        <nav class="bg menu-nav-slide">
+            <a href="../home/home.html"><span data-hover="Iniciar">Inicio</span></a>
+            <a href="../cadastrar/cadastrar.html"><span data-hover="Cadastrar">Cadastrar</span></a>
+            <a href="../entrar/entrar.html"><span data-hover="Login">Login</span></a>
+            <a href="../sobre/sobre.html"><span data-hover="Sobre">Sobre</span></a>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+<!-- teste -->
+<script src="/index.js"></script>
+<div class="container">
+    <div class="container-login">
+        <div class="wrap-login">
+            <form class="login-form">
+					<span class="login-form-title">
+						Faça o login
+					</span>
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form" type="text" name="email" id="username" autocomplete="off">
+                    <span class="focus-input-form" data-placeholder="E-mail"></span>
+                </div>
+
+                <div class="wrap-input margin-bottom-35">
+                    <input class="input-form" type="password" name="password" id="password">
+                    <span class="focus-input-form" data-placeholder="Senha"></span>
+                </div>
+
+                <div class="container-login-form-btn">
+                    <!-- <a href="Consulta.html">  -->
+                        <button type="button" class="login-form-btn" onclick="login()">Login </button>
+                    <!-- </a> -->
+                </div>
+                <!-- <li> <a href="Consulta.html" > Login</a> </li> //tirar dps -->
+                <li>
+                    <span class="text1"> Não tem conta? </span> <a href="../cadastrar/cadastrar.html" class="text2" > Criar </a>
+                </li>
+                </ul>
+            </form>
+        </div>
+
+<!-- teste -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <script src="/main.js"></script> -->
+ <!-- <script type="module,component" src="/index.js"></script>
     <div class="testee">
         <form id="login-form">
-            <br>
-            <br>
             <label for="username">Nome de Usuário:</label>
-            <br>
             <input type="text" id="username" name="username" required>
-            <br>
             <label for="password">Senha:</label>
-            <br>
             <input type="password" id="password" name="password" required>
-            <br>
-            <br>
-            <br>
-            <button type="submit">Login</button>
-          </form>
-          <p id="error-message"></p>
-    </div>
+            <button type="submit" onclick="login()">Login</button>
+           
+        </form>
+        <p id="error-message"></p>
+    </div> -->
+
+    <footer>
+        © 2023 AulaLink - Todos os direitos reservados.
+    </footer>
+
+    <script>
+
+        
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script> 
+    <script src="/index.js"></script>
+
+    <!-- <script type="component" src="./entrar.js"></script> -->
 </body>
-<br>
-<footer>
-    © 2023 AulaLink - Todos os direitos reservados.
-</footer>
 </html>

@@ -1,104 +1,108 @@
-// var TOKEN_LOGIN
+var TOKEN_LOGIN
 
-// function login() {
-//     const campos = camposLogin()
+console.log("CHEGOU NO JS");
 
-//     const result = loginService.login(campos).then((item) => {
-//         window.location.href = "entrar.html"
-//         setToken(item)
-//     }).catch(error => {
-//         alert(error)
+function login() {
+    const campos = camposLogin() // campos login chama função
+console.log("função login");
+    const result = loginService.login(campos).then((item) => {
+        window.location.href = "./usuario/usuario.html"
+        setToken(item)
+    }).catch(error => {
+        alert(error)
+    })
+}
+
+function getToken(){
+    const token = JSON.parse(this.TOKEN_LOGIN)
+    return token.token
+}
+
+function setToken(token){
+    this.TOKEN_LOGIN = token
+    const auth = JSON.parse(this.TOKEN_LOGIN)
+    localStorage.setItem('token' , auth.token)
+}
+
+//  function GetClientes() {
+//      const result = callApi({
+//         method: "GET",
+//          url: "http://localhost:8080/api/v1/"
 //     })
-// }
+//  }
 
-// function getToken(){
-//     const token = JSON.parse(this.TOKEN_LOGIN)
-//     return token.token
-// }
+const loginService = {
+    
+    login: campos => {
+        console.log("chamou api de login");
+        return callApi({
+            method: "POST",
+            url: "http://localhost:8080/api/v1/signin",
+            params: campos
+        })
+    },
 
-// function setToken(token){
-//     this.TOKEN_LOGIN = token
-//     const auth = JSON.parse(this.TOKEN_LOGIN)
-//     localStorage.setItem('token' , auth.token)
-// }
+     get: campos => {
+         return callApi({
+            method: "POST",
+             url: "http://localhost:8080/api/v1/",
+         })
+    }
+}
 
-// // function GetClientes() {
-// //     const result = callApi({
-// //         method: "GET",
-// //         url: "http://localhost:8080/v1/clientes"
-// //     })
-// // }
+function camposLogin() {
+    console.log("chegou no campos de login");
+    return {
+        
+        email: form.email().value,
+        senha: form.senha().value
+    }
+}
+const form = {
+    email: () => document.getElementById("username"),
+    senha: () => document.getElementById("password")
+    
+}
 
+function callApi({ method, url, params }) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
 
+        xhr.open(method, url, true);
+        //xhr.setRequestHeader('Authorization', await firebase.auth().currentUser.getIdToken())
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        // xhr.setRequestHeader('Access-Control-Allow-Origin', '')
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                const json = this.responseText;
+                console.log(this.status)
+                if (this.status != 200) {
+                    reject(json || 'Falha ao logar');
+                } else {
+                    resolve(json);
+                }
+            }
+        };
 
-// const loginService = {
-//     login: campos => {
-//         return callApi({
-//             method: "POST",
-//             url: "http://localhost:8080/v1/login",
-//             params: campos
-//         })
-//     },
+        xhr.responseType = "text"
+        xhr.send(JSON.stringify(params));
+    })
+}
 
-//     get: campos => {
-//         return callApi({
-//             method: "POST",
-//             url: "http://localhost:8080/v1/cachorros",
-//         })
-//     }
-// }
-
-// function camposLogin() {
-//     return {
-//         email: form.email().value,
-//         senha: form.senha().value
-//     }
-// }
-
-// const form = {
-//     email: () => document.getElementById("emailLogin"),
-//     senha: () => document.getElementById("passwordLogin")
-// }
-
-// function callApi({ method, url, params }) {
-//     return new Promise((resolve, reject) => {
-//         const xhr = new XMLHttpRequest();
-
-//         xhr.open(method, url, true);
-//         //xhr.setRequestHeader('Authorization', await firebase.auth().currentUser.getIdToken())
-//         xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-//         // xhr.setRequestHeader('Access-Control-Allow-Origin', '')
-//         xhr.onreadystatechange = function () {
-//             if (this.readyState == 4) {
-//                 const json = this.responseText;
-//                 console.log(this.status)
-//                 if (this.status != 200) {
-//                     reject(json || 'Falha ao logar');
-//                 } else {
-//                     resolve(json);
-//                 }
-//             }
-//         };
-
-//         xhr.responseType = "text"
-//         xhr.send(JSON.stringify(params));
-//     })
-// }
-
-// async function GetClientes() {
-//     // const response = await fetch('http://localhost:8080/v1/clientes');
-//     const result = ClienteService.Find().then((item) => {
-//         var data = JSON.parse(item)
-//        ShowData(data);
+async function GetClientes() {
+    // const response = await fetch('http://localhost:8080/v1/clientes');
+    const result = ClienteService.Find().then((item) => {
+        var data = JSON.parse(item)
+       ShowData(data);
   
-//     }).catch(error => {
-//         alert(error)
-//     })
+    }).catch(error => {
+        alert(error)
+    })
     
 
-// }
+}
 
-// // getapi("http://localhost:8080/v1/clientes");
+// getapi("http://localhost:8080/v1/clientes");
 
 // function ShowData(data) {
 //     let tab = 
@@ -125,7 +129,7 @@
 //     document.getElementById("clients").innerHTML = tab;
 // }
 
-// // Clientes
+// Clientes
 // function CadastrarUser(){
 //     const campos = camposCadastroUser()
 //     const token = localStorage.getItem('token')
@@ -156,37 +160,37 @@
 //     document.getElementById("Cadastro_User_Largura").value = ""
 // }
 
-// const ClienteService = {
-//     Find: () => {
-//         return callApiClientes({
-//             method: "GET",
-//             url: "http://localhost:8080/v1/clientes"
-//         })
-//     },
+const ClienteService = {
+    Find: () => {
+        return callApiClientes({
+            method: "GET",
+            url: "http://localhost:8080/api/v1/signin"
+        })
+    },
 
-//     Cadastrar: (campos) => {
-//         return callApiClientes({
-//             method: "POST",
-//             url: "http://localhost:8080/v1/clientes",
-//             params: campos,
-//         })
-//     },
+    Cadastrar: (campos) => {
+        return callApiClientes({
+            method: "POST",
+            url: "http://localhost:8080/v1/clientes",
+            params: campos,
+        })
+    },
 
-//     Deletar: (id) => {
-//         return callApiClientes({
-//             method: "DELETE",
-//             url: `http://localhost:8080/v1/clientes/${id}`,
-//         })
-//     },
+    Deletar: (id) => {
+        return callApiClientes({
+            method: "DELETE",
+            url: `http://localhost:8080/v1/clientes/${id}`,
+        })
+    },
 
-//     Update: (id,campos) => {
-//         return callApiClientes({
-//             method: "PUT",
-//             url: `http://localhost:8080/v1/clientes/${id}`,
-//             params: campos,
-//         })
-//     }
-// }
+    Update: (id,campos) => {
+        return callApiClientes({
+            method: "PUT",
+            url: `http://localhost:8080/v1/clientes/${id}`,
+            params: campos,
+        })
+    }
+}
 
 // function camposCadastroUser(){
 //     return {
@@ -233,29 +237,29 @@
 // }
 
 
-// function callApiClientes({method, url, params}) {
-//     return new Promise((resolve, reject) => {
-//         const xhr = new XMLHttpRequest();
+function callApiClientes({method, url, params}) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
 
-//         xhr.open(method, url, true);
-//         const token = localStorage.getItem('token')
-//         xhr.setRequestHeader('Authorization', `Bearer ${token}`)
-//         xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-//         xhr.onreadystatechange = function() {
-//             if (this.readyState == 4) {
-//                 const json = this.responseText;
-//                 if (this.status != 200) {
-//                     reject(json || 'Error');
-//                 } else {
-//                     resolve(json);
-//                 }
-//             }
-//         };
+        xhr.open(method, url, true);
+        const token = localStorage.getItem('token')
+        xhr.setRequestHeader('Authorization', `Bearer ${token}`)
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                const json = this.responseText;
+                if (this.status != 200) {
+                    reject(json || 'Error');
+                } else {
+                    resolve(json);
+                }
+            }
+        };
         
-//         xhr.responseType = "text"
-//         xhr.send(JSON.stringify(params));
-//     })
-// }
+        xhr.responseType = "text"
+        xhr.send(JSON.stringify(params));
+    })
+}
 
 // const formDelete = {
 //     id: () => document.getElementById("Id_Delete")
