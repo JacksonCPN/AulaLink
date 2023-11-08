@@ -19,8 +19,10 @@ export class AuthService {
     })
       .then(response => response.json())
       .then(data => {
+        console.log("test", data);
         if (data) {
           console.log('Usuário autenticado:', data);
+          
 
           localStorage.setItem('token', data.token);
            // Redirecionar o usuário após o login bem-sucedido
