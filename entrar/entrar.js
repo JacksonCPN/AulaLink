@@ -1,5 +1,4 @@
-import { AuthService } from "../conexao/services/authService";
-
+import { AuthService } from '../conexao/services/AuthService';
 const loginForm = document.getElementById("login-form");
 const errorMessage = document.getElementById("error-message");
 
@@ -10,7 +9,7 @@ loginForm.addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
   console.log('Chegou aqui');
 
-  // AuthService.login(username, password);
+  AuthService.login(this.username, this.password);
 
   // Realizar validação (exemplo simples)
   if (username === "teste" && password === "teste") {
