@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { AuthService } from "../conexao/services/AuthService";
 
+=======
+import { AuthService } from "../AuthService.js";
+>>>>>>> d2750303e4dcf640d14ce04d4a4beca4303cd811
 const loginForm = document.getElementById("login-form");
 const errorMessage = document.getElementById("error-message");
 
