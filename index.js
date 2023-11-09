@@ -6,7 +6,7 @@ function login() {
     const campos = camposLogin() // campos login chama função
 console.log("função login");
     const result = loginService.login(campos).then((item) => {
-        window.location.href = "./usuario/usuario.html"
+        window.location.href = "/usuario/usuario.html"
         setToken(item)
     }).catch(error => {
         alert(error)
